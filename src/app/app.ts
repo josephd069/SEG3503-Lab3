@@ -1,13 +1,26 @@
 import { Component } from '@angular/core';
-import { AddressList } from './address-list/address-list';
-import { Header } from './header/header';
+import { ShoppingInput } from './shopping-input/shopping-input';
+import { ShoppingList } from './shopping-list/shopping-list';
 
 @Component({
   selector: 'app-root',
+  imports: [
+    ShoppingInput,
+    ShoppingList
+  ],
   templateUrl: './app.html',
-  styleUrls: ['./app.css'],
-  imports: [Header, AddressList]
+  styleUrl: './app.css'
 })
 export class App {
-  title = 'address-book';
+
+  items: string[] = [];
+
+  addItem(item: string): void {
+    this.items.push(item);
+  }
+
+  deleteItem(index: number): void {
+    this.items.splice(index, 1);
+  }
+
 }

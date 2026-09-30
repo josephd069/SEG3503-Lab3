@@ -1,20 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Header } from './header';
+import { ShoppingInput } from './shopping-input';
 
-describe('HeaderComponent', () => {
-  let component: Header;
-  let fixture: ComponentFixture<Header>;
+describe('ShoppingInput', () => {
+  let component: ShoppingInput;
+  let fixture: ComponentFixture<ShoppingInput>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [Header]
-})
+      imports: [ShoppingInput]
+    })
     .compileComponents();
-  });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(Header);
+    fixture = TestBed.createComponent(ShoppingInput);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
